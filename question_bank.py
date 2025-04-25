@@ -123,8 +123,9 @@ def display_question_and_accept_answer(question):
     """
     #------------------------
     # Add your code here
-    print("Question:")
-    ans=intput()
+    
+    print(f"{question}")
+    ans=input()
     return ans
     
     #------------------------
