@@ -30,6 +30,17 @@ def choose_category(categories):
     """
     #------------------------
     # Add your code here
+    print("Choose the desired category")
+    for i,c in enumerate(categories,start=1):
+        print(f"{i}.{c})")
+    Flag = True
+    while Flag:
+        choose = int(input("Choose your category by entering the number "))
+        if choose>=1 and choose <=len(categories):
+            return categories[choose-1]
+            Flag = False
+        else:
+            print("Invalid Choice")
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -48,6 +59,7 @@ def display_score(score, round_number):
     """
     #------------------------
     # Add your code here
+    print("your current score is",current score)
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -65,6 +77,8 @@ def game_over_message(final_score):
     """
     #------------------------
     # Add your code here
+    print("game over",final score)
+    
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -82,6 +96,9 @@ def run_game_rounds(categories):
     """
     #------------------------
     # Add your code here
+    for i in range(5):
+        choose=input()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
