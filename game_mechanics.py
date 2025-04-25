@@ -32,13 +32,13 @@ def choose_category(categories):
     #------------------------
     # Add your code here
     catagory=["science","sports","gaming","arts","movies","animal","nature"]
-    print("Choose the desired category")
-    for i,c in enumerate(categories,start=1):
-        print(f"{i}.{c})")
-    Flag = True
+    print("Choose the category")
+    for i,c in enumerate(categories,start = 1):
+        print(f"{i}.{c}")
+    Flaf = True
     while Flag:
-        choose = int(input("Choose your category by entering the number "))
-        if choose>=1 and choose <=len(categories):
+        choose = int(input("choose your category by entering the number")))
+        if choose>=1 and choose <= len(categories):
             return categories[choose-1]
             Flag = False
         else:
