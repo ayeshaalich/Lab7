@@ -60,7 +60,7 @@ def select_random_question(category):
     #------------------------
     # Add your code here
     if category not found in questions:
-        
+        return question[category]
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -166,6 +166,7 @@ def display_correct_answer(correct_answer):
     """
     #------------------------
     # Add your code here
+    print("Yes it's correct!",correct_answer)
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
