@@ -16,6 +16,13 @@ def choose_difficulty():
     """
     #------------------------
     # Add your code here
+    levels = ["easy","medium","hard"]
+    while True:
+        choice = input()
+        if choice in levels:
+            return choice
+        else:
+            print("Invalid Input")
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -35,6 +42,15 @@ def display_leaderboard(leaderboard):
     """
     #------------------------
     # Add your code here
+    l=[]
+    for i in leaderboard:
+        l.append(leaderboard[i])
+    l.sort(reverse = True)
+    for a in l:
+        for k in leaderboard:
+            if leaderboard[k] == a:
+                print(f"{k},{a}")
+                
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -54,6 +70,7 @@ def save_score(player_name, score, file_path='scores.txt'):
     """
     #------------------------
     # Add your code here
+    
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -93,6 +110,11 @@ def provide_feedback(is_correct):
     """
     #------------------------
     # Add your code here
+    if is_correct == True:
+        print("Well done!")
+    else:
+        print("Sorry, that's incorrect")
+        
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -114,6 +136,15 @@ def fifty_fifty_lifeline(correct_answer, options):
     """
     #------------------------
     # Add your code here
+    c = 0
+    l = []
+    for i in options:
+        if i != correct_answer:
+            c +=1
+            if c == 2:
+                break
+    l.append(i)
+    return(l)
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -134,6 +165,11 @@ def skip_question(allowed_skips):
     """
     #------------------------
     # Add your code here
+    if  allowed_skips > 0:
+        allowed_skip[s -=1
+        return True
+    else:
+        return False
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
