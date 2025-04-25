@@ -13,6 +13,7 @@ def welcome_message():
     """
     #------------------------
     # Add your code here
+    print("WELCOME to TRIVIA TREK")
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -30,6 +31,7 @@ def choose_category(categories):
     """
     #------------------------
     # Add your code here
+    catagory=["science","sports","gaming","arts","movies","animal","nature"]
     print("Choose the desired category")
     for i,c in enumerate(categories,start=1):
         print(f"{i}.{c})")
@@ -118,6 +120,11 @@ def validate_answer(player_answer, correct_answer):
     """
     #------------------------
     # Add your code here
+    if player_answer==correct_answer:
+        return True
+    else:
+        return False
+        
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -137,6 +144,14 @@ def update_score(score, correct):
     """
     #------------------------
     # Add your code here
+    u_score=0
+    if correct == True:
+        u_score= score + 1
+        return u_score
+    else:
+        return score
+        
+        
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -155,6 +170,7 @@ def next_round(round_number):
     """
     #------------------------
     # Add your code here
+    
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -173,6 +189,11 @@ def check_game_over(incorrect_answers):
     """
     #------------------------
     # Add your code here
+    if incorrect_answers >= 3:
+        return True
+    else:
+        return False
+    
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
